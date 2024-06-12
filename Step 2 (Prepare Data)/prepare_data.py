@@ -10,7 +10,7 @@ pd.set_option('display.max_rows', None)
 pd.options.display.float_format = '{:.0f}'.format
 
 # df_1 = pd.read_csv('car_1.csv')
-# df_2 = pd.read_csv('car_2.csv')w
+# df_2 = pd.read_csv('car_2.csv')
 # df_3 = pd.read_csv('car_3.csv')
 # df_4 = pd.read_csv('car_4.csv')
 
@@ -359,3 +359,21 @@ car_df['yil'] = car_df['yil'].astype(int)
 
 # Verinin son halini kaydet:
 car_df.to_csv('car_last.csv', index = False, mode = 'a')
+
+
+
+
+motor_hacmi_not_short_line_df = car_df[~(car_df['motor_hacmi'] == '-')]
+motor_hacmi_short_line_df = car_df[car_df['motor_hacmi'] == '-']
+mapping_motor_hacmi_dict = {}
+
+for index, row in motor_hacmi_not_short_line_df.iterrows():
+    mapping_motor_hacmi_dict[row['Detail_Breadcrumb']] = row['motor_hacmi']
+
+for index, row in motor_hacmi_short_line_df.iterrows():
+    breadcrump_value = row['Detail_Breadcrumb']
+    if breadcrump_value in mapping_motor_hacmi_dict:
+        car_df.at[index, 'motor_hacmi'] = mapping_motor_hacmi_dict[breadcrump_value]
+
+car_df[car_df['motor_hacmi'] == '-']  # 2 örnek
+car_df = car_df[~(car_df['motor_hacmi'] == '-')]
