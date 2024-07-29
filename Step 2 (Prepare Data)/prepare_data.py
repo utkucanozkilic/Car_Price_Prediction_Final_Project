@@ -7,7 +7,7 @@ import seaborn as sns
 pd.set_option('display.max_columns', None)
 pd.set_option('display.width', 1881)
 pd.set_option('display.max_rows', None)
-pd.options.display.float_format = '{:.0f}'.format
+pd.options.display.float_format = '{:.4f}'.format
 
 # df_1 = pd.read_csv('car_1.csv')
 # df_2 = pd.read_csv('car_2.csv')

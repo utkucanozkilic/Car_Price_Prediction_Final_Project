@@ -146,4 +146,4 @@ print('Test RMSE:', mean_squared_error(y_test, y_pred_test, squared = False))
 
 # Model ve scaler değerlerini kaydet:
 joblib.dump(model_pipeline, 'Step 3 (Modelling)/pipeline_model.pkl')
-joblib.dump(preprocessor, 'Step 3 (Modelling)/preprocessor.pkl')
+joblib.dump(preprocessor, 'Step 3 (Modelling)/preprocessor.pkl')  # Bu satıra gerek yok.
