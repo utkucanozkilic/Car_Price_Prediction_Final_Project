@@ -1,5 +1,7 @@
-/prepare_data_by_funcs.py
-/pipeline_model.pkl
-/tahmin.csv
-# Boyuttan dolayı modeli yükleme:
+/Step 2 (Prepare Data)/prepare_data_by_funcs.py
+# Boyuttan dolayı github'da sorun olduğundan modeli push yapma:
 /Step 3 (Modelling)/randomforrestregressor_model.pkl
+# Step 1 (Get Adverts) klasöründeki tüm dosyaları hariç tut
+Step 1 (Get Adverts)/*
+# 'read_me.txt' dosyasını hariç tut
+!Step 1 (Get Adverts)/read_me.txt
