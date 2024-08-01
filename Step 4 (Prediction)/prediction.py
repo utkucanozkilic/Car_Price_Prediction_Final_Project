@@ -2,7 +2,6 @@ import pandas as pd
 import joblib
 
 
-
 pd.set_option('display.max_columns', None)
 pd.set_option('display.width', 1881)
 pd.options.display.float_format = '{:.4f}'.format

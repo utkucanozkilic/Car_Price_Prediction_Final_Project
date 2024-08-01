@@ -1,2 +1,5 @@
 /prepare_data_by_funcs.py
 /pipeline_model.pkl
+/tahmin.csv
+# Boyuttan dolayı modeli yükleme:
+/Step 3 (Modelling)/randomforrestregressor_model.pkl
